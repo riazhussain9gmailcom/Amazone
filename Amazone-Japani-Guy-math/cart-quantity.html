@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<link rel="stylesheet" href="/CSS/style.css" />
+	<title>Amazone Add Quantity</title>
+</head>
+
+<body>
+	<div class="container">
+		<h1>Cart Quantity</h1>
+		<button class="btn" onclick="
+		console.log (`Riaz Final Updated CartQuanity is : = ${cartQuantity}`);
+		">
+			Show Quantity
+		</button>
+
+		<button class="btn" onclick="
+		cartQuantity = cartQuantity + 1;
+		console.log (`Riaz This is Cart Quanity: = ${cartQuantity}`);
+">
+			Add to Cart
+		</button>
+
+		<button class="btn" onclick="
+		// cartQuantity = cartQuantity + 2;
+		cartQuantity += 2; 
+		console.log (`Riaz This is Cart Quanity: = ${cartQuantity}`);
+		">+2</button>
+
+		<button class="btn" onclick="
+	cartQuantity = cartQuantity + 3;
+		console.log (`Riaz This is Cart Quanity: = ${cartQuantity}`);
+		">+3</button>
+
+		<button class="btn" onclick="
+			cartQuantity = 0;
+			console.log ('cartQuantity was Reset'); 
+		console.log (`Riaz This is Cart Quanity: = ${cartQuantity}`);
+">Reset Cart</button>
+	</div>
+
+	<script>
+		let cartQuantity = 0;
+	</script>
+</body>
+
+<script src="js/font-awsome.js"></script>
+
+</html>
