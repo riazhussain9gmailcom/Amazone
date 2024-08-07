@@ -1,0 +1,21 @@
+<script>
+
+ let matchingItem;
+ cart.forEach((cartItem) => {
+  if (productId === cartItem.productId) {
+   matchingItem = cartItem;
+  }
+ });
+
+ if (matchingItem) {
+  matchingItem.quantity += quantity;
+ } else {
+  cart.push({
+   // productId: productId,
+   // quantity: quantity
+   // destructive feature for assigning... object item...
+   productId,
+   quantity,
+  });
+ }
+</script>

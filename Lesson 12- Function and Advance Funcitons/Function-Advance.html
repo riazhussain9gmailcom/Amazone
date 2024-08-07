@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Advance Functions-JS</title>
+</head>
+
+<body>
+  <script>
+    // ---------------------------------------------
+    // Set timeout Funciton (have two parameter)
+    // passing function to settimeout()
+    // ---------------------------------------------
+
+
+    // setTimeout(function () {
+    //   console.log('timeout')
+    // }, 3000);
+    // console.log('Next Line');
+
+    // setInterval(function () {
+    //   console.log('Interval');
+    // },5000);
+    // console.log('Next Line');
+
+
+    //  Three Ways Declare Function
+    // Simple Function
+    // ---------------------------------------------
+    function greeting() {
+      console.log("Regular Function ");
+    }
+    greeting();
+    // Variable Function (Function are values)
+    // ---------------------------------------------
+    const num = 2;
+    // same variable function
+    const function2 = function greeting() {
+      console.log("Variable or Value Function ");
+    };
+    console.log(function2);
+    console.log(typeof function2);
+    // We can also run the Function using Variabl() because its type also now ();
+    function2();
+    // ---------------------------------------------
+    // Anonomus Function (delete (greeting()) name of function
+    // ---------------------------------------------
+    // same variable function
+    const functionR = function () {
+      console.log("Anonymous Function without Name as greeting()");
+    };
+    // We can also run the Function using Variabl() because its type also now ();
+    functionR();
+
+    // ---------------------------------------------
+    // Function are Valus There for put Function in Object..
+    // Object also have Value
+    // Object also have Functions as
+    const object = {
+      num: 5,
+      fun: function greeting() {
+        console.log("fun is variable for function in Object, which called by using (object.fun();)");
+      },
+    };
+    console.log(object);
+    object.fun();
+
+    // ---------------------------------------------
+    // Passing value in Function 
+
+    function display(param) {
+      console.log(param);
+    }
+    display(500);
+    // ---------------------------------------------
+
+    // ---------------------------------------------
+    // Passing a Funciton into another Function       // ---------------------------------------------
+    // using (param as variable) so variable is called by param();
+    // ---------------------------------------------
+
+    function run(param) {
+      param();
+    }
+    run(function () {
+      console.log("in place parameter value passed Function inside a Function");
+    });
+
+    // ---------------------------------------------
+    // Regular Function Vs Arrow Funciton
+    // ---------------------------------------------
+
+    const function3 = () => {
+      console.log("Arrow Function");
+    };
+    function3();
+
+    // Regular Function
+    // ----------------
+    function RegularFunction() {
+      console.log("Riaz Regular-Function");
+    }
+    RegularFunction();
+
+    // Variable Function
+    // ----------------
+    const RegularFunction1 = function () {
+      console.log("Ali Regular-Function");
+    }
+    RegularFunction1();
+
+    // Arrow Function is Variable + Arrow Combination
+    // ----------------
+    const ArrowFunction = () => {
+      console.log("Ali-2 Arrow-Function");
+    };
+    ArrowFunction();
+
+    // Parameter Passing Function:
+    // ---------------------------------------------
+
+    // Regular Function with Parameter
+    // ----------------
+    function RegularFunction2(param1, param2) {
+      console.log("Regular-Function-with-2-Parameter-Passing");
+      return 5;
+    }
+    RegularFunction2(2, 3);
+
+    // Arrow Function with Parameter
+    // ----------------
+    const ArrowFunction1 = (param1, param2) => {
+      console.log("Arrow-Function-with-2-Parameter-Passing.....");
+      return 5;
+    };
+    ArrowFunction1();
+    // Diffrence between Regular Function & Arrow Function
+    // is Arrow Function have (Shortcut)
+    // ----------------
+    const ArrowFunction3 = (param) => {
+      console.log(param + 1);
+    };
+    ArrowFunction3(5);
+
+    // is Arrow Function have (Short use remove bracket)
+    // ----------------
+    const ArrowFunction4 = (param) => {
+      console.log(param + 2);
+    };
+    ArrowFunction4(5);
+
+    // One Line Arrow Function (Remove Extra Bracket etc.)
+    const OneLineArrowFunction = () => 2 + 7;
+    console.log(OneLineArrowFunction());
+
+
+    // ----------------
+    const number = [10, 20, 30, 40, 50];
+    for (let i = 0; i < number.length; i++) {
+      let nums = number[i];
+      console.log(` Index Number = ${i} and Index Store Value = ${nums}`);
+    }
+    // ----------------
+    // Access Array Value by For Loop & with Simple Function
+    // ----------------
+    // const objectArray = [
+    //   'make dinner',
+    //   'wash dishes',
+    //   'watch youtube',
+    //   'cook food'
+    // ]
+    // for (let i = 0; i < objectArray.length; i++) {
+    //   let ObjectArrayVal = objectArray[i];
+    //   console.log(`The Index is ${i} value is ${ObjectArrayVal}`);
+    //   console.log(`The Index is ${i} value is ${ObjectArrayVal[i]}`);
+    // }
+
+
+    // ----------------
+    // Access Array Value by 1-param using ForEach Loop & with Simple Function
+    // ----------------
+    // [
+    //   'make dinner',
+    //   'wash dishes',
+    //   'watch youtube',
+    //   'cook food'
+    // ]
+    // .forEach(function (param) {
+    //   console.log(param);
+    // });
+
+
+    // ----------------
+    // Access Array Value by (double param) using ForEach Loop & with Simple Function
+    // ----------------
+    [
+      'make dinner',
+      'wash dishes',
+      'watch youtube',
+      'cook food'
+    ]
+      .forEach(function (value, index) {
+        console.log(index);
+        console.log(value);
+      });
+
+    // Access Array Value using ForEach Loop & with Arrow Functon
+    // ----------------
+    // [
+    //   "make dinner",
+    //   "wash dishes",
+    //   "watch youtube"
+    // ].forEach(
+    //   (value, index) => {
+    //     if (value === "wash dishes") {
+    //       return;
+    //     }
+    //     console.log(index);
+    //     console.log(value);
+    //   }
+    // );
+
+    // console.log('Next Line');
+
+    //  return statement ( Arrow Function with two param);
+    const oneParam = param => {
+      return (param + 2);
+    }
+    const sum = (oneParam(1));
+    console.log(`Used of Return Statement =${sum}`);
+
+    // Return statement ( two param Arrow Function with two param);
+    const Abc = (param1, param2) => {
+      return(param1 + param2);
+    }
+    console.log(Abc(5,5));
+    
+    // oneLine Arrow Funciton 
+
+    // const oneLine1 = () => {return 2 + 2;}; 
+    const oneLine1 = () => 4 + 2; 
+    console.log(oneLine1());
+    // Online Arrow Funciton with Parameter
+    const oneLine2 = (param) => param + 2; 
+    console.log(oneLine2(5));
+  </script>
+</body>
+
+</html>

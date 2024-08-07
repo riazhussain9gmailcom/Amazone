@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Excercise 12n</title>
+</head>
+
+<body>
+  <script>
+    function removeEgg(foods) {
+      let eggRemoved = 0;
+      return foods.filter((value) => {
+        if (value === "egg" && eggRemoved < 2) {
+          eggRemoved++;
+          // retun false meanse delete (egg from an Array)
+          return false;
+        }
+        return true;
+      });
+    }
+    console.log(
+      removeEgg(["egg", "apple", "banana", "egg", "mangoo", "egg"])
+    );
+  </script>
+</body>
+
+</html>

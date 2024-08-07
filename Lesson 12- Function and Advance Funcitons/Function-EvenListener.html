@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Function-Arrays-Loops (Amazone)</title>
+</head>
+
+<body>
+  <button class="js-button" onclick="">Click</button>
+
+  <button class="js-button-remove-event" onclick="">
+    Click Remove-Event
+  </button>
+
+  <script>
+    // Run Multiple event listeners for (one event)....
+    const buttonElement1 = document.querySelector(".js-button");
+    buttonElement1.addEventListener("click", () => {
+      console.log("click1");
+    });
+    buttonElement1.addEventListener("click", () => {
+      console.log("click2");
+    });
+    buttonElement1.addEventListener("click", () => {
+      console.log("click3");
+    });
+
+    // Remove Event listeners ...
+
+    const buttonElement = document.querySelector(".js-button-remove-event");
+    const eventlistener = () => {
+      console.log("click-remove-Event-1");
+    };
+    buttonElement.addEventListener("click", eventlistener);
+    buttonElement.removeEventListener("click", eventlistener);
+    buttonElement.addEventListener("click", () => {
+      console.log('click-Add-Event-2')
+    });
+
+  </script>
+</body>
+
+</html>
